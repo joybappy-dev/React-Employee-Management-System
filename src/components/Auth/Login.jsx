@@ -18,6 +18,7 @@ const Login = () => {
     setLoading(true);
     try {
       console.log(email, password);
+      // eslint-disable-next-line no-unused-vars
     } catch (err) {
       setError("Login failed. Please try again.");
     } finally {
@@ -40,7 +41,6 @@ const Login = () => {
           className="border border-emerald-500 rounded-full px-4 py-2 outline-none w-full"
           type="email"
           placeholder="Enter your email"
-          required
         />
 
         <input
@@ -50,10 +50,15 @@ const Login = () => {
           className="border border-emerald-500 rounded-full px-4 py-2 outline-none w-full"
           type="password"
           placeholder="Enter your password"
-          required
         />
 
-        {error && <p className="text-red-500 text-sm">{error}</p>}
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            error ? "max-h-10 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <p className="text-red-500 text-sm ml-1">{error}</p>
+        </div>
 
         <button
           type="submit"
