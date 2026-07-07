@@ -3,4 +3,11 @@
 body {
   background-color: #111;
   color: #ffff;
+  padding: 20px 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#tasklist::-webkit-scrollbar {
+  display: "";
 }
