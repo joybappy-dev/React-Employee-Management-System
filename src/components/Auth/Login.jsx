@@ -34,6 +34,7 @@ const Login = () => {
         onSubmit={handleLogin}
         className="border-2 border-emerald-500 p-8 sm:p-12 rounded-xl space-y-4 w-full max-w-sm"
       >
+        <label>Email</label>
         <input
           name="email"
           value={email}
@@ -43,6 +44,7 @@ const Login = () => {
           placeholder="Enter your email"
         />
 
+        <label>Password</label>
         <input
           name="password"
           value={password}
